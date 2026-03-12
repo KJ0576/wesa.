@@ -1696,17 +1696,12 @@ th {
   line-height: 1.68;
 }
 
-.page-officers .officer-meta p:first-of-type,
-.page-officers .officer-meta p:nth-of-type(2) {
+.page-officers .officer-meta p:first-of-type {
   font-size: clamp(1.66rem, 2.15vw, 1.88rem);
   font-weight: 800;
   line-height: 1.35;
   margin-top: 0.34rem;
   white-space: nowrap;
-}
-
-.page-officers .officer-meta p:nth-of-type(2) {
-  justify-self: start;
 }
 
 .page-officers .officer-message {
@@ -2219,7 +2214,8 @@ th {
 
 
 .achievement-result-win,
-.achievement-result-runnerup {
+.achievement-result-runnerup,
+.achievement-result-third {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -2235,7 +2231,8 @@ th {
 }
 
 .achievement-result-win::after,
-.achievement-result-runnerup::after {
+.achievement-result-runnerup::after,
+.achievement-result-third::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -2245,7 +2242,8 @@ th {
 }
 
 .achievement-result-win::before,
-.achievement-result-runnerup::before {
+.achievement-result-runnerup::before,
+.achievement-result-third::before {
   position: absolute;
   top: -0.42rem;
   left: 0.58rem;
@@ -2274,18 +2272,49 @@ th {
 }
 
 .achievement-result-runnerup {
-  border: 1px solid #9fb5d6;
-  color: #223a61;
-  text-shadow: 0 1px 0 rgba(245, 250, 255, 0.75);
-  background: linear-gradient(90deg, rgba(236, 244, 255, 0.95), rgba(194, 212, 239, 0.92) 45%, rgba(224, 236, 252, 0.95));
-  box-shadow: 0 6px 14px rgba(72, 105, 155, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.64);
+  border: 1px solid #b8c0ca;
+  color: #2f3742;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.82);
+  background: linear-gradient(90deg, rgba(247, 249, 252, 0.96), rgba(213, 220, 229, 0.94) 45%, rgba(238, 242, 248, 0.96));
+  box-shadow: 0 6px 14px rgba(88, 99, 115, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.74);
 }
 
 .achievement-result-runnerup::before {
   content: "2nd";
-  color: #233d67;
-  border: 1px solid #9fb5d6;
-  background: linear-gradient(90deg, #f2f7ff, #d6e4fb);
+  color: #2f3742;
+  border: 1px solid #b8c0ca;
+  background: linear-gradient(90deg, #f8fafc, #d8dee7);
+}
+
+.achievement-result-third {
+  border: 1px solid #d2a06e;
+  color: #5a3308;
+  text-shadow: 0 1px 0 rgba(255, 250, 244, 0.75);
+  background: linear-gradient(90deg, rgba(246, 221, 191, 0.95), rgba(222, 168, 112, 0.92) 45%, rgba(241, 206, 171, 0.95));
+  box-shadow: 0 6px 14px rgba(128, 84, 47, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.64);
+}
+
+.achievement-result-third::before {
+  content: "3rd";
+  color: #5a3308;
+  border: 1px solid #d2a06e;
+  background: linear-gradient(90deg, #f6e1c6, #e2b889);
+}
+
+/* Fallback: even if the 2nd card accidentally keeps runnerup class, show it as 3rd */
+.achievement-grid .achievement-card:nth-child(2) .achievement-result-runnerup {
+  border: 1px solid #d2a06e;
+  color: #5a3308;
+  text-shadow: 0 1px 0 rgba(255, 250, 244, 0.75);
+  background: linear-gradient(90deg, rgba(246, 221, 191, 0.95), rgba(222, 168, 112, 0.92) 45%, rgba(241, 206, 171, 0.95));
+  box-shadow: 0 6px 14px rgba(128, 84, 47, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.64);
+}
+
+.achievement-grid .achievement-card:nth-child(2) .achievement-result-runnerup::before {
+  content: "3rd";
+  color: #5a3308;
+  border: 1px solid #d2a06e;
+  background: linear-gradient(90deg, #f6e1c6, #e2b889);
 }
 
 .achievement-card .event-thumb {
@@ -3264,8 +3293,7 @@ th {
     row-gap: 0.3rem;
   }
 
-  .page-officers .officer-meta p:first-of-type,
-  .page-officers .officer-meta p:nth-of-type(2) {
+  .page-officers .officer-meta p:first-of-type {
     font-size: clamp(1.08rem, 4.2vw, 1.3rem);
     white-space: normal;
     overflow-wrap: anywhere;
