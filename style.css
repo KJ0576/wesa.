@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Nunito:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Nunito:wght@700;800&display=swap');
 
 :root {
   --text: #11203a;
@@ -3128,6 +3128,16 @@ th {
 
   .welcome-content-list {
     grid-template-columns: 1fr;
+  }
+
+  .hero-catchcopy {
+    display: inline-block;
+    width: 100%;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    padding: 0.14em 0.22em;
   }
 
   .deadline-meta {
