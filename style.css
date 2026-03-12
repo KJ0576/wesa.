@@ -86,6 +86,10 @@ img {
   height: auto;
 }
 
+.is-zoomable {
+  cursor: zoom-in;
+}
+
 .container {
   width: min(1000px, 88vw);
   margin: 0 auto;
@@ -2466,6 +2470,17 @@ th {
   border: 0;
   border-radius: 12px;
   background: #ffffff;
+}
+
+/* Eventsページの「新歓参加フォーム一覧」を常時非表示 */
+.page-events .welcome-marquee,
+.page-events .online-form-embed,
+.page-events #online-welcome-form {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 @keyframes rise-in {
