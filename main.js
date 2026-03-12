@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   initPageState();
   initReveal();
   initHeaderState();
@@ -294,8 +294,11 @@ function initDeadlineImagePicker() {
 }
 
 function initLightbox() {
-  const targets = document.querySelectorAll(
-    ".gallery-main, .gallery-mini img, .officer-thumb, .achievement-card .event-thumb, .deadline-thumb, .join-welcome-grid .event-thumb"
+  const targets = Array.from(document.querySelectorAll("main img")).filter(
+    (img) =>
+      !img.closest(".site-header") &&
+      !img.closest(".site-footer") &&
+      !img.closest(".chat-widget")
   );
   if (!targets.length) return;
 
@@ -307,7 +310,14 @@ function initLightbox() {
   const lbImg = lb.querySelector("img");
 
   targets.forEach((img) => {
-    img.addEventListener("click", () => {
+    img.classList.add("is-zoomable");
+    img.addEventListener("click", (event) => {
+      const parentLink = img.closest("a[href]");
+      if (parentLink) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
       lbImg.src = img.getAttribute("src") || "";
       lbImg.alt = img.getAttribute("alt") || "image";
       lb.classList.add("is-open");
