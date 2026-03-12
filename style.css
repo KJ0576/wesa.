@@ -3259,6 +3259,20 @@ th {
     min-height: 0;
   }
 
+  .page-officers .officer-meta {
+    grid-template-columns: 1fr;
+    row-gap: 0.3rem;
+  }
+
+  .page-officers .officer-meta p:first-of-type,
+  .page-officers .officer-meta p:nth-of-type(2) {
+    font-size: clamp(1.08rem, 4.2vw, 1.3rem);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.45;
+  }
+
   .page-officers .officer-thumb {
     width: min(420px, 100%);
     aspect-ratio: 4 / 5;
