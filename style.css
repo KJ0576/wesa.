@@ -2180,6 +2180,25 @@ th {
   background: #ffffff;
 }
 
+.achievement-card-bronze {
+  border-color: #d2a06e;
+  background: linear-gradient(160deg, #fffaf5 0%, #f6e6d3 100%);
+  box-shadow: 0 12px 24px rgba(128, 84, 47, 0.18);
+}
+
+.achievement-card-bronze .achievement-meta dt {
+  color: #6b3f12;
+}
+
+.achievement-card-bronze .achievement-meta dd {
+  color: #5a3308;
+}
+
+.achievement-card-bronze .event-thumb {
+  outline-color: #d2a06e;
+  box-shadow: 0 10px 22px rgba(128, 84, 47, 0.22);
+}
+
 .achievement-grid {
   margin-top: 0.9rem;
   display: grid;
@@ -2301,8 +2320,9 @@ th {
   background: linear-gradient(90deg, #f6e1c6, #e2b889);
 }
 
-/* Fallback: even if the 2nd card accidentally keeps runnerup class, show it as 3rd */
-.achievement-grid .achievement-card:nth-child(2) .achievement-result-runnerup {
+/* Force Okuma Cup card (2nd card) to bronze tone */
+.achievement-grid .achievement-card:nth-child(2) .achievement-result-runnerup,
+.achievement-grid .achievement-card:nth-child(2) .achievement-result-third {
   border: 1px solid #d2a06e;
   color: #5a3308;
   text-shadow: 0 1px 0 rgba(255, 250, 244, 0.75);
@@ -2310,7 +2330,8 @@ th {
   box-shadow: 0 6px 14px rgba(128, 84, 47, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.64);
 }
 
-.achievement-grid .achievement-card:nth-child(2) .achievement-result-runnerup::before {
+.achievement-grid .achievement-card:nth-child(2) .achievement-result-runnerup::before,
+.achievement-grid .achievement-card:nth-child(2) .achievement-result-third::before {
   content: "3rd";
   color: #5a3308;
   border: 1px solid #d2a06e;
