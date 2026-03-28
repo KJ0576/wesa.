@@ -298,7 +298,8 @@ function initLightbox() {
     (img) =>
       !img.closest(".site-header") &&
       !img.closest(".site-footer") &&
-      !img.closest(".chat-widget")
+      !img.closest(".chat-widget") &&
+      !img.closest(".speech-icon-link")
   );
   if (!targets.length) return;
 
