@@ -1090,6 +1090,10 @@ th {
   box-shadow: 0 10px 22px rgba(44, 18, 28, 0.18);
 }
 
+.speech-icon-link .speech-icon-img {
+  pointer-events: none;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
