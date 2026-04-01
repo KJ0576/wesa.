@@ -348,7 +348,6 @@ main {
 .hero h2 {
   font-family: "Nunito", "Noto Sans JP", sans-serif;
   font-size: clamp(1.85rem, 4.2vw, 3rem);
-/* style.css 全文 2/8 */
   font-weight: 800;
   line-height: 1.35;
 }
@@ -699,7 +698,6 @@ table {
   border-collapse: collapse;
   font-size: 1rem;
 }
-/* style.css 全文 3/8 */
 
 th,
 td {
@@ -1050,7 +1048,6 @@ th {
   height: 28px;
   flex: 0 0 28px;
 }
-/* style.css 全文 4/8 */
 
 .speech-icon-link {
   display: inline-block;
@@ -1400,7 +1397,7 @@ th {
 .section.is-visible .officers-list > :nth-child(3) { animation-delay: 310ms; }
 .section.is-visible .officers-list > :nth-child(4) { animation-delay: 410ms; }
 .section.is-visible .officers-list > :nth-child(5) { animation-delay: 510ms; }
-/* style.css 全文 5/8 */
+
 .officers-list .officer-item:nth-child(1) {
   border-top-color: #f08a24;
   background: #ffffff;
@@ -1751,7 +1748,6 @@ th {
 }
 
 .page-officers .activity-chief-list .officer-item:nth-child(4) {
-/* style.css 全文 6/8 */
   border-top-color: #24a27d;
   background: linear-gradient(90deg, rgba(36, 162, 125, 0.18), rgba(255, 255, 255, 0.96) 42%);
 }
@@ -2102,7 +2098,6 @@ th {
 .welcome-content-list li {
   min-height: 46px;
   padding: 0.58rem 0.85rem;
-/* style.css 全文 7/8 */
   text-align: left;
   border-radius: 12px;
   line-height: 1.45;
@@ -2147,6 +2142,8 @@ th {
   margin: 0;
   color: #4f5b71;
 }
+
+
 
 .achievement-result-win,
 .achievement-result-runnerup {
@@ -2451,8 +2448,6 @@ th {
 
 @keyframes rise-in-right {
   from {
-/* style.css 全文 8/8 */
-
     opacity: 0;
     transform: translateX(22px) translateY(16px) scale(0.9) rotate(1.2deg);
     border-radius: 18px 32px 20px 28px;
@@ -3131,3 +3126,4 @@ th {
     scroll-behavior: auto !important;
   }
 }
+
