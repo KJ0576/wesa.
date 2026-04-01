@@ -299,7 +299,7 @@ function initLightbox() {
       !img.closest(".site-header") &&
       !img.closest(".site-footer") &&
       !img.closest(".chat-widget") &&
-      !img.closest(".speech-icon-link")
+      !img.closest("a[href]")
   );
   if (!targets.length) return;
 
@@ -312,13 +312,7 @@ function initLightbox() {
 
   targets.forEach((img) => {
     img.classList.add("is-zoomable");
-    img.addEventListener("click", (event) => {
-      const parentLink = img.closest("a[href]");
-      if (parentLink) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-
+    img.addEventListener("click", () => {
       lbImg.src = img.getAttribute("src") || "";
       lbImg.alt = img.getAttribute("alt") || "image";
       lb.classList.add("is-open");
