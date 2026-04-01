@@ -106,7 +106,7 @@ img {
 }
 
 .header-row {
-  min-height: 86px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,8 +128,8 @@ img {
 
 .main-nav {
   display: flex;
-  gap: 1.18rem;
-  font-size: 1.12rem;
+  gap: 0.92rem;
+  font-size: 1rem;
   color: #1f2b45;
   flex-wrap: nowrap;
   white-space: nowrap;
@@ -145,8 +145,8 @@ img {
 .main-nav a {
   display: inline-flex;
   align-items: center;
-  min-height: 54px;
-  font-size: clamp(1.16rem, 1.7vw, 1.38rem);
+  min-height: 46px;
+  font-size: clamp(1rem, 1.35vw, 1.14rem);
   font-weight: 800;
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -3031,14 +3031,39 @@ th {
 
   .header-row {
     flex-wrap: wrap;
-    padding: 0.42rem 0;
+    min-height: auto;
+    padding: 0.32rem 0;
   }
 
   .main-nav {
     order: 3;
     width: 100%;
+    gap: 0.7rem;
     overflow-x: auto;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.15rem;
+  }
+
+  .main-nav a {
+    min-height: 40px;
+    padding: 0.32rem 0.12rem;
+    font-size: 0.94rem;
+  }
+
+  .header-cta .btn {
+    min-height: 40px;
+    padding-inline: 0.9rem;
+    font-size: 0.92rem;
+  }
+
+  .hero-catchcopy {
+    display: block;
+    width: 100%;
+    padding: 0.24rem 0.88rem 0.32rem;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+    line-height: 1.5;
   }
 
   main { padding-top: 144px; }
