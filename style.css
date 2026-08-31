@@ -6,10 +6,11 @@
   --line: #d8e2f3;
   --card: #ffffff;
   --shadow: 0 9px 24px rgba(22, 34, 68, 0.12);
-  --radius: 14px;
+  --radius: 22px;
   --accent-a: #17c8ff;
   --accent-b: #ff4fb2;
   --accent-c: #7657ff;
+  --accent-d: #ffb703;
   --dur-fast: 820ms;
   --dur-mid: 1280ms;
   --ease-pop: cubic-bezier(0.2, 0.9, 0.22, 1.12);
@@ -34,7 +35,7 @@ body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   color: var(--text);
   font-size: 1rem;
-  background: #ffffff;
+  background: #fffaf3;
   line-height: 1.7;
   opacity: 1;
   transform: none;
@@ -53,10 +54,13 @@ body::after {
 }
 
 body::before {
-  background: none;
+  background:
+    radial-gradient(38% 30% at 8% 12%, rgba(23, 200, 255, 0.28), transparent 70%),
+    radial-gradient(34% 28% at 88% 10%, rgba(255, 79, 178, 0.26), transparent 70%),
+    radial-gradient(40% 32% at 54% 92%, rgba(255, 183, 3, 0.24), transparent 70%);
   background-repeat: no-repeat;
-  opacity: 0;
-  filter: blur(100px);
+  opacity: 1;
+  filter: blur(60px);
   animation: mesh-float 26s ease-in-out infinite alternate;
 }
 
@@ -123,7 +127,7 @@ img {
   letter-spacing: 0.12em;
   font-size: clamp(1.4rem, 2.25vw, 1.95rem);
   line-height: 1;
-  color: #7a0014;
+  color: #ff5a36;
   text-shadow: 0 1px 0 rgba(122, 0, 20, 0.1);
 }
 
@@ -205,7 +209,7 @@ img {
   min-height: 42px;
   padding: 0 0.95rem;
   border: 1px solid var(--line);
-  border-radius: 11px;
+  border-radius: 999px;
   background: #fff;
   font-size: 0.96rem;
   font-weight: 700;
@@ -349,8 +353,8 @@ main {
   width: 100%;
   max-width: 100%;
   background: rgba(255, 255, 255, 0.92);
-  border: 1px solid #e8d6db;
-  border-radius: 14px;
+  border: 2px solid #ffd9c2;
+  border-radius: 22px;
   box-shadow: 0 10px 22px rgba(44, 18, 28, 0.12);
 }
 
@@ -385,7 +389,7 @@ main {
   text-wrap: balance;
   color: #0b1c38;
   text-shadow: 0 6px 18px rgba(19, 42, 79, 0.24);
-  border-radius: 12px;
+  border-radius: 18px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 246, 248, 0.82));
   clip-path: none;
   animation: catchcopy-glow 3.4s ease-in-out 800ms infinite;
@@ -399,7 +403,7 @@ main {
   bottom: -6px;
   height: 4px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #8e0000, #e64078);
+  background: linear-gradient(90deg, #ff3d61, #e64078);
   opacity: 0.9;
 }
 
@@ -415,9 +419,9 @@ main {
 }
 
 .section > .container {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid #ead8dd;
-  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 2px solid #ffd9c2;
+  border-radius: 26px;
   padding: clamp(0.9rem, 2vw, 1.2rem);
   box-shadow: 0 14px 28px rgba(44, 18, 28, 0.11);
 }
@@ -426,7 +430,7 @@ main {
   font-family: "Nunito", "Noto Sans JP", sans-serif;
   font-size: clamp(1.7rem, 3.4vw, 2.4rem);
   font-weight: 800;
-  color: #780012;
+  color: #ff5a36;
 }
 
 .section > .container > p {
@@ -457,7 +461,7 @@ main {
 .card {
   position: relative;
   background: #ffffff;
-  border: 2px solid #e7d5db;
+  border: 2px solid #ffddc2;
   border-radius: var(--radius);
   box-shadow: 0 10px 24px rgba(34, 20, 28, 0.12);
   padding: 0.9rem;
@@ -467,7 +471,7 @@ main {
   font-family: "Nunito", "Noto Sans JP", sans-serif;
   font-size: clamp(1.12rem, 2.2vw, 1.48rem);
   font-weight: 800;
-  color: #7a0014;
+  color: #ff5a36;
 }
 
 .card p,
@@ -757,7 +761,7 @@ th {
 
 .gallery-main,
 .gallery-mini img {
-  border-radius: 11px;
+  border-radius: 16px;
   border: 3px solid #ffffff;
   outline: 2px solid #ddc2ca;
   overflow: hidden;
@@ -862,7 +866,7 @@ th {
   width: min(360px, calc(100vw - 28px));
   background: linear-gradient(170deg, #ffffff, #f8fcff);
   border: 1px solid #d9e3f2;
-  border-radius: 14px;
+  border-radius: 20px;
   box-shadow: 0 12px 27px rgba(19, 35, 69, 0.16);
   padding: 0.8rem;
   opacity: 0;
@@ -900,7 +904,7 @@ th {
   width: 100%;
   min-height: 40px;
   border: 1px solid #d4dfef;
-  border-radius: 10px;
+  border-radius: 16px;
   padding: 0 0.64rem;
   font-size: 1rem;
 }
@@ -916,7 +920,7 @@ th {
   text-align: left;
   min-height: 36px;
   border: 1px solid #cfe0f4;
-  border-radius: 11px;
+  border-radius: 16px;
   background: linear-gradient(90deg, rgba(23, 200, 255, 0.12), rgba(255, 79, 178, 0.12));
   padding: 0 0.62rem;
   font-size: 0.94rem;
@@ -933,7 +937,7 @@ th {
   margin-top: 0.66rem;
   border: 1px solid #e1e7f2;
   background: #fbfdff;
-  border-radius: 10px;
+  border-radius: 16px;
   padding: 0.68rem;
   font-size: 0.92rem;
 }
@@ -1104,7 +1108,7 @@ th {
   width: min(1020px, 92vw);
   max-height: 84vh;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   transform: scale(1.04);
   transition: transform var(--dur-mid) var(--ease-pop);
@@ -1226,9 +1230,9 @@ th {
 .hero-question {
   font-size: clamp(1.35rem, 3.2vw, 2rem);
   font-weight: 800;
-  color: #8e0000;
+  color: #ff3d61;
   background: #ffffff;
-  border: 2px solid #8e0000;
+  border: 2px solid #ff3d61;
   box-shadow: 0 6px 14px rgba(24, 30, 44, 0.12);
   animation: hero-question-slide 860ms cubic-bezier(0.2, 0.9, 0.22, 1.04) 120ms both;
 }
@@ -1294,7 +1298,7 @@ th {
 
 .film-rail {
   position: relative;
-  border-radius: 14px;
+  border-radius: 20px;
   border: 1px dashed #bfd4ef;
   background: rgba(255, 255, 255, 0.78);
   padding: 0.48rem;
@@ -1351,7 +1355,7 @@ th {
   object-position: center 22%;
   margin: 0;
   cursor: zoom-in;
-  border-radius: 14px;
+  border-radius: 20px;
   border-width: 4px;
   transition: transform var(--dur-fast) var(--ease-pop), box-shadow var(--dur-fast) ease;
 }
@@ -1425,7 +1429,7 @@ th {
 }
 
 .officers-list .officer-item:nth-child(2) .officer-meta h3 {
-  color: #aa1010;
+  color: #ff3d61;
 }
 
 .officers-list .officer-item:nth-child(3) {
@@ -1497,7 +1501,7 @@ th {
 }
 
 .page-officers .section h2 {
-  color: #780012;
+  color: #ff5a36;
   font-size: clamp(2.2rem, 4.1vw, 3rem);
 }
 
@@ -1574,7 +1578,7 @@ th {
 }
 
 .officer-hero-copy h1 {
-  color: #780012;
+  color: #ff5a36;
 }
 
 .officer-hero-copy p {
@@ -1593,7 +1597,7 @@ th {
   justify-items: center;
   gap: 0.1rem;
   padding: 0.52rem 0.3rem;
-  border-radius: 12px;
+  border-radius: 18px;
   border: 1px solid #d4e1f2;
   background: rgba(255, 255, 255, 0.9);
 }
@@ -1957,7 +1961,7 @@ th {
   margin-top: 0.6rem;
   font-family: "Nunito", "Noto Sans JP", sans-serif;
   font-size: clamp(1.55rem, 2.9vw, 2.05rem);
-  color: #7b0019;
+  color: #ff5a36;
 }
 
 .deadline-thumb {
@@ -2006,7 +2010,7 @@ th {
   margin-top: 0.34rem;
   font-size: clamp(1rem, 1.75vw, 1.1rem);
   font-weight: 800;
-  color: #8c0011;
+  color: #ff5a36;
 }
 
 .deadline-meta {
@@ -2036,7 +2040,7 @@ th {
 }
 
 .deadline-entry .pointer-mark {
-  color: #bf0041;
+  color: #ff3d61;
   font-size: clamp(1.16rem, 2vw, 1.34rem);
   font-weight: 900;
   letter-spacing: 0.01em;
@@ -2061,7 +2065,7 @@ th {
   font-size: clamp(1.55rem, 2.9vw, 2.05rem);
   font-weight: 800;
   line-height: 1.25;
-  color: #7a0014;
+  color: #ff5a36;
 }
 
 .join-welcome-grid .card h2 {
@@ -2111,7 +2115,7 @@ th {
   min-height: 46px;
   padding: 0.58rem 0.85rem;
   text-align: left;
-  border-radius: 12px;
+  border-radius: 18px;
   line-height: 1.45;
 }
 
@@ -2230,7 +2234,7 @@ th {
 .achievement-card .event-thumb {
   height: 100%;
   min-height: 190px;
-  border-radius: 10px;
+  border-radius: 16px;
   object-fit: cover;
   cursor: zoom-in;
   transition: transform var(--dur-fast) var(--ease-pop), box-shadow var(--dur-fast) ease;
@@ -2257,7 +2261,7 @@ th {
   object-fit: cover;
   border: 3px solid #ffffff;
   outline: 2px solid #ddc2ca;
-  border-radius: 10px;
+  border-radius: 16px;
   margin-bottom: 0.65rem;
   box-shadow: 0 12px 24px rgba(44, 18, 28, 0.14);
 }
@@ -2301,7 +2305,7 @@ th {
 .marquee-row {
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 20px;
   border: 1px dashed #c9d9ef;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(244, 250, 255, 0.86));
   padding: 0.62rem;
@@ -2354,7 +2358,7 @@ th {
   width: clamp(180px, 22vw, 255px);
   min-width: 180px;
   border: 1px solid #d5e3f4;
-  border-radius: 12px;
+  border-radius: 18px;
   background: #fff;
   padding: 0.55rem;
   box-shadow: 0 6px 18px rgba(25, 39, 73, 0.09);
@@ -2407,7 +2411,7 @@ th {
   height: 980px;
   margin-top: 0.85rem;
   border: 0;
-  border-radius: 12px;
+  border-radius: 18px;
   background: #ffffff;
 }
 
@@ -2809,7 +2813,7 @@ th {
   letter-spacing: 0.03em;
   color: #ffffff;
   text-shadow: 0 10px 24px rgba(8, 16, 30, 0.55), 0 0 18px rgba(142, 0, 0, 0.26);
-  border-radius: 14px;
+  border-radius: 20px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.28), rgba(142, 0, 0, 0.22), rgba(0, 0, 0, 0.28));
   backdrop-filter: blur(2px);
   animation: home-message-in 980ms cubic-bezier(0.2, 0.9, 0.22, 1.04) 180ms both, home-message-float 3.2s ease-in-out 1.3s infinite;
