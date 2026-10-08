@@ -3319,6 +3319,11 @@ body::before {
   grid-column: 1 / -1;
 }
 
+.home-activities-grid .activities-card-wide .event-thumb {
+  max-height: 300px;
+  object-fit: cover;
+}
+
 .page-activities .grid.grid-5 {
   gap: 0.75rem;
 }
@@ -3333,4 +3338,12 @@ body::before {
   font-size: 0.6em;
   vertical-align: middle;
   letter-spacing: 0.04em;
+}
+
+/* ===== 秋新歓: スマホでも新歓カードを横スクロールで全部見られるように ===== */
+@media (max-width: 640px) {
+  .welcome-marquee .marquee-row {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
