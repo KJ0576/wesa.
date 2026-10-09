@@ -934,3 +934,17 @@ html.op-on::before {
     display: none;
   }
 }
+
+/* Join: show the whole LINE add-friend photo (portrait), not a 16:9 crop */
+.deadline-spotlight .deadline-thumb {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(78vh, 640px);
+  aspect-ratio: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 0;
+}
