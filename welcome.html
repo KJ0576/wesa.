@@ -22,8 +22,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="layout.css">
 </head>
-<body>
+<body class="page-welcome lx">
   <header class="site-header">
     <div class="container header-row">
       <a href="index.html" class="logo logo-with-mark">
@@ -45,7 +46,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero hero-split">
       <div class="container">
         <div class="hero-media js-reveal"><img src="shinkan-hanami.jpg" alt="WESAの新歓で集まったメンバーの集合写真"></div>
         <div class="hero-copy js-reveal">
@@ -57,15 +58,23 @@
 
     <section class="section js-reveal">
       <div class="container">
-        <h2>概要</h2>
+        <div class="section-head">
+          <h2>概要</h2>
+        </div>
         <article class="card">
           <p>WESAの<strong>2026年 秋新歓</strong>です！まずはLessonやイベントに気軽に来てみてください。</p>
           <p>Lessonは平日毎日3限。日本語メインでみんなで遊ぶので、WESAの雰囲気を知りたい人にぴったりです。</p>
           <p><strong>10/19（月）と10/28（水）は、その日のLesson（3限）がピクニック・ハロウィンパーティーに置き換わります。</strong></p>
           <p>場所・参加方法などの詳細は、公式LINEで案内します。</p>
         </article>
+      </div>
+    </section>
 
-        <h2 style="margin-top:1.1rem;">秋新歓 2026 はこちら！</h2>
+    <section class="section js-reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>秋新歓 2026 はこちら！</h2>
+        </div>
         <div class="welcome-marquee">
           <div class="marquee-row">
             <div class="marquee-track">
@@ -75,8 +84,14 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <h2 style="margin-top:1.1rem;">日程</h2>
+    <section class="section js-reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>日程</h2>
+        </div>
         <div class="table-wrap">
           <table>
             <thead>
@@ -89,8 +104,14 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
 
-        <h2 style="margin-top:1.1rem;">内容</h2>
+    <section class="section js-reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>内容</h2>
+        </div>
         <article class="card">
           <ul class="event-detail-list welcome-content-list">
             <li>Lesson：日本語メインでみんなで遊んで、WESAの雰囲気を知ろう</li>
@@ -99,8 +120,14 @@
             <li>場所・参加方法などの詳細は公式LINEで案内します</li>
           </ul>
         </article>
+      </div>
+    </section>
 
-        <h2 style="margin-top:1.1rem;">Gallery</h2>
+    <section class="section js-reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>Gallery</h2>
+        </div>
         <div class="gallery">
           <img class="gallery-main" src="spring-camp-4.jpg" alt="新歓ギャラリー 1" loading="lazy" decoding="async">
           <div class="gallery-mini">
@@ -110,14 +137,24 @@
             <img src="shinkan-gallery-4.jpg" alt="新歓ギャラリー 4" loading="lazy" decoding="async">
           </div>
         </div>
+      </div>
+    </section>
 
-        <h2 style="margin-top:1.1rem;">FAQ</h2>
+    <section class="section js-reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+        </div>
         <dl class="card">
           <div class="faq-item"><dt>Q: 初心者でも参加できますか？</dt><dd>A: もちろん！！参加をお待ちしています！！</dd></div>
           <div class="faq-item"><dt>Q: 参加費はかかりますか？</dt><dd>A: 詳細は公式LINEで案内します。</dd></div>
           <div class="faq-item"><dt>Q: 持ち物は？</dt><dd>A: 詳細は公式LINEで案内します。</dd></div>
         </dl>
+      </div>
+    </section>
 
+    <section class="section js-reveal lx-band">
+      <div class="container">
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://lin.ee/WOIaKqe" target="_blank" rel="noopener noreferrer">公式LINEを追加</a>
           <a class="btn btn-secondary" href="chat.html">質問する（Chatbot）</a>
