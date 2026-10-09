@@ -237,33 +237,40 @@
   }
 }
 
-/* ---------- Home: officers card as photo + text (PC) ---------- */
+/* ---------- Home: officers — one large team photo, then title row with link (PC) ----------
+   CHG-SITE-005 v1: photo keeps its 16:9 crop, shown at full content width. */
 @media (min-width: 861px) {
   .home-officers-section .officers-card {
     max-width: none;
     display: grid;
-    grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
-    grid-template-rows: 1fr auto auto auto 1fr;
-    padding: 0;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 2rem;
+    padding: 0 0 1.75rem;
   }
 
   .home-officers-section .officers-card > .event-thumb:first-child {
-    grid-column: 1;
-    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    grid-row: 1;
     width: 100%;
-    height: 100%;
-    margin: 0;
-    border-radius: calc(var(--radius) - 1px) 0 0 calc(var(--radius) - 1px);
+    aspect-ratio: 16 / 9;
+    margin: 0 0 1.5rem;
+    border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
   }
 
   .home-officers-section .officers-card > :not(.event-thumb) {
-    grid-column: 2;
     padding-inline: clamp(1.5rem, 3vw, 2.5rem);
   }
 
-  .home-officers-section .officers-card > h3 { grid-row: 2; }
-  .home-officers-section .officers-card > p { grid-row: 3; }
-  .home-officers-section .officers-card > .external-entry { grid-row: 4; }
+  .home-officers-section .officers-card > h3 { grid-column: 1; grid-row: 2; }
+  .home-officers-section .officers-card > p { grid-column: 1; grid-row: 3; }
+
+  .home-officers-section .officers-card > .external-entry {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    align-self: center;
+    padding-top: 0;
+  }
 }
 
 /* ---------- Closing band (full width, brand colour) ---------- */
